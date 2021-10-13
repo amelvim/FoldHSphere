@@ -1,4 +1,6 @@
-# FoldHSphere: Deep Hyperspherical Embeddings for Protein Fold Recognition
+# FoldHSphere
+
+This repository contains the source code to reproduce the results of the paper "FoldHsphere: Deep Hyperspherical Embeddings for Protein Fold Recognition" (see citation below).
 
 ## Downloadable data
 
@@ -75,3 +77,22 @@ SCORESDIR="${MODELDIR}/scores"
 - PyTorch 1.4.0
 - Tensorboard 2.2.0
 - PyTorch-Lightning 0.10.0
+
+## Citation
+Villegas-Morcillo, A., Sanchez, V. & Gomez, A.M. FoldHSphere: deep hyperspherical embeddings for protein fold recognition. *BMC Bioinformatics* **22,** 490 (2021). https://doi.org/10.1186/s12859-021-04419-7
+
+BibTex:
+
+```bibtex
+@article{villegas2021fold,
+  author = {Villegas-Morcillo, Amelia and Sanchez, Victoria and Gomez, Angel M.},
+  title = {FoldHSphere: deep hyperspherical embeddings for protein fold recognition},
+  journal = {BMC Bioinformatics},
+  year = {2021},
+  month = {Oct},
+  volume = {22},
+  number = {1},
+  pages = {490},
+  doi = {10.1186/s12859-021-04419-7}
+}
+```

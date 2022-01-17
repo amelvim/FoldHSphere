@@ -165,7 +165,7 @@ def main(args):
     # Training phase
     if args.phase == "train":
 
-        # Define Lightning model for the training process
+        # Define `MultiClassTrain` Lightning model for the training process
         pl_model = MultiClassTrain(net=net, hparams=args, log_file=log_file)
         # Define Tensorboard logger
         logger = TensorBoardLogger(args.model_dir + "/logs", name="")

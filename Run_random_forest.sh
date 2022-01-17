@@ -15,7 +15,7 @@ if [[ $DATASET == "lindahl" || $DATASET == "lindahl_1.75" ]]; then
     SCORESFILES="${RESDIR}/FoldHSphere/${DATASET}.score"
     SCORESFILES+="+${RESDIR}/DeepFR_s2/${DATASET}.score"
 
-    for PART in {1..2}; do
+    for PART in {1..10}; do
         TRAINFILE="data/${DATASET}/cv10_pairs/train${PART}.pairs"
         TESTFILE="data/${DATASET}/cv10_pairs/test${PART}.pairs"
         SAVEFILE="${OUTDIR}/${DATASET}_${PART}.score"
@@ -23,7 +23,7 @@ if [[ $DATASET == "lindahl" || $DATASET == "lindahl_1.75" ]]; then
         python scripts/random-forest/rf_lindahl.py \
             $SIMFILE $SCORESFILES $TRAINFILE $TESTFILE $SAVEFILE $NJOBS
     done
-    cat ${OUTDIR}/${DATASET}_{1..2}.score > ${OUTDIR}/${DATASET}.score
+    cat ${OUTDIR}/${DATASET}_{1..10}.score > ${OUTDIR}/${DATASET}.score
 
     echo "[*] Evaluating..."
     ./Run_eval_pairs_cosine.sh ${DATASET} "none" ${OUTDIR}
